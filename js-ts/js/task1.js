@@ -24,3 +24,4 @@ var generator3 = sequence();
 console.log(generator3());
 console.log(generator3());
 
+//
