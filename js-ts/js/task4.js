@@ -4,7 +4,7 @@ function sequence(start = 0, step = 1) {
 	return function () {
 		let outputNumber = number;
 		number += step;
-		return outputNumber
+		return outputNumber;
 	}
 
 }
@@ -35,4 +35,4 @@ function fmap(a, gen) {
 
 let squareAdd = fmap(square, add);
 
-console.log(squareAdd(2, 3)) // 25 = (2 + 3) ^ 2
+console.log(squareAdd(2, 3)) // 25 
