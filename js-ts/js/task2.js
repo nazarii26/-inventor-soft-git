@@ -22,4 +22,5 @@ function take(fn, count) {
 
 let gen2 = sequence(0, 2);
 
-console.log(take(gen2, 5));
+console.log(take(gen2, 5)); //[0, 2, 4, 6, 8]
+
