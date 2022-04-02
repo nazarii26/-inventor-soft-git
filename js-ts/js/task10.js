@@ -6,4 +6,5 @@ var d = [];
 function count(obj) {
 	return Object.keys(obj).length;
 }
+
 count(b);
