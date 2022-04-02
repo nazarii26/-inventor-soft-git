@@ -5,6 +5,6 @@ let characters = [
 
 function pluck(objects, fieldName) {
 	result = objects.map(x => x[fieldName])
-	return result
+	return result 
 }
 console.log(pluck(characters, 'name'));
