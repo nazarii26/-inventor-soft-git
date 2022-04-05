@@ -1,0 +1,27 @@
+[
+	{
+		"id": 1,
+		"isRead": false,
+		"title": "JavaScript for Kids"
+	},
+	{
+		"id": 2,
+		"isRead": false,
+		"title": "Alice in Wonderland"
+	},
+	{
+		"id": 3,
+		"isRead": true,
+		"title": "1984"
+	},
+	{
+		"id": 4,
+		"isRead": true,
+		"title": "The Holy Bible"
+	},
+	{
+		"id": 5,
+		"isRead": false,
+		"title": "How to win friends"
+	}
+]
