@@ -3,7 +3,7 @@ import './style.css';
 import { Book } from '../book';
 
 export const Books = (props) => {
-	if (!props.data.length) return <p>there is no data</p>;
+	if (!props.data.length) return <p className="empty-store">Your bookstore is empty!</p>;
 
 	return (
 		<ul className="book-list">

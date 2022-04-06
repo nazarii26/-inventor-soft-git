@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import BOOK_LIST from './store.json';
 import { Books } from './components/Books';
 import './style.css';
+import { AddForm } from './components/AddForm';
+import { StatisticBoard } from "./components/StatisticBoard";
 
 const App = () => {
 
@@ -21,13 +23,23 @@ const App = () => {
 			{ ...prevState[idx], isRead: !prevState[idx].isRead },
 			...prevState.slice(idx + 1),
 		]);
-
 	}
 
+	const onAddNewBook = book => {
+		const newBook = { ...book, id: bookList.length + 1 };
+		setBookList(prevState => ([...prevState, newBook]));
+	};
 
+	const statisticsData = {
+		all: bookList.length,
+		readBooks: bookList.filter(book => book.isRead).length,
+		notReadBooks: bookList.filter(book => !book.isRead).length,
+	}
 
 	return (
 		<div className="container">
+			<AddForm onAddNewBook={onAddNewBook} />
+			<StatisticBoard {...statisticsData} onRemoveAll={() => setBookList([])} />
 			<Books data={bookList} onRemoveBook={removeBook} onReadBook={onReadBook} />
 		</div>
 	);
