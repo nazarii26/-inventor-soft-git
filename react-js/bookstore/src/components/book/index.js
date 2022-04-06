@@ -1,7 +1,7 @@
 import React from 'react';
 import "./style.css";
 
-export const Book = ({ count, item }) => {
+export const Book = ({ count, item, onRemoveBook, onReadBook }) => {
 	const titleStyle = `book-title ${item.isRead ? "isRead" : ""}`;
 
 	return (
@@ -9,12 +9,12 @@ export const Book = ({ count, item }) => {
 			<span className="book-count"> {count}</span>
 			<span className={titleStyle}> {item.title}</span>
 			<span className="row">
-				<span className="pointer" onClick={() => console.log(123)}> 🗑 </span>
+				<span className="pointer" onClick={() => onRemoveBook(item.id)}> 🗑 </span>
 				<input
 					type="checkbox"
 					className="pointer"
 					checked={item.isRead}
-					onChange={() => console.log(123)}
+					onChange={() => onReadBook(item.id)}
 				/>
 			</span>
 		</li>

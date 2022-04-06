@@ -3,10 +3,12 @@ import './style.css';
 import { Book } from '../book';
 
 export const Books = (props) => {
+	if (!props.data.length) return <p>there is no data</p>;
+
 	return (
 		<ul className="book-list">
 			{props.data.map((book, idx) => {
-				return <Book key={book.id} item={book} count={idx + 1} />
+				return <Book key={book.id} item={book} count={idx + 1} onRemoveBook={props.onRemoveBook} onReadBook={props.onReadBook}/>
 			})}
 		</ul>
 	)
