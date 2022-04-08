@@ -3,18 +3,13 @@ import "./style.css";
 
 export const AddForm = ({ onAddNewBook }) => {
 
-
-	// const inputRef = useRef(null);
 	const [book, setBook] = useState(() => ({
 		isRead: false,
 		title: "",
+		description: ""
 	}));
-	// useEffect(() => {
-	// 	if (inputRef && inputRef.current) {
-	// 		inputRef.current.foucs();
-	// 	}
-	// }, []);
-
+	console.log(book);
+	
 	return (
 		<form
 			className="book-form"
@@ -25,12 +20,14 @@ export const AddForm = ({ onAddNewBook }) => {
 					setBook(() => ({ // після того, як добавить книгу, очищає форму
 						isRead: false,
 						title: "",
+						description: ""
 					}));
 				}
 			}}
 		>
+
 			<input
-				//ref={inputRef}
+				
 				className="book-input"
 				type="text"
 				placeholder="Title of book"
@@ -39,11 +36,23 @@ export const AddForm = ({ onAddNewBook }) => {
 					setBook((prev) => ({ ...prev, title: e.target.value }));
 				}}
 			/>
+
+			<input
+				
+				className="book-input-description"
+				type="text"
+				placeholder="Description"
+				value={book.description}
+				onChange={(e) => { //робить динамічним book.title, без цієї ф-ції не буде вводитись текст, бо title постійно буде ""
+					setBook((prev) => ({ ...prev, description: e.target.value }));
+				}}
+			/>
 			<button
 				className="book-button pointer"
 				type="submit">
 				Add new book
 			</button>
+			
 		</form>
 	)
 };

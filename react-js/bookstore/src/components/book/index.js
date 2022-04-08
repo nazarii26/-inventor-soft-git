@@ -8,6 +8,7 @@ export const Book = ({ count, item, onRemoveBook, onReadBook }) => {
 		<li className="book-wrapper">
 			<span className="book-count"> {count}</span>
 			<span className={titleStyle}> {item.title}</span>
+			<span className="book-description"> {item.description}</span>
 			<span className="row">
 				<span className="pointer" onClick={() => onRemoveBook(item.id)}> 🗑 </span>
 				<input

@@ -8,6 +8,7 @@ import { StatisticBoard } from "./components/StatisticBoard";
 const App = () => {
 
 	const [bookList, setBookList] = useState(BOOK_LIST);
+	console.log(bookList);
 
 	const removeBook = (id) => {
 		//setBookList(bookList.filter(book => book.id !== id)); // II варіант як створити функціонал видалення item. Якщо айді не співпадає з айді, який прилітає, то відфільтровуємо
@@ -38,6 +39,7 @@ const App = () => {
 
 	return (
 		<div className="container">
+			<h1 className="head-1">Book list</h1>
 			<AddForm onAddNewBook={onAddNewBook} />
 			<StatisticBoard {...statisticsData} onRemoveAll={() => setBookList([])} />
 			<Books data={bookList} onRemoveBook={removeBook} onReadBook={onReadBook} />

@@ -2,26 +2,31 @@
 	{
 		"id": 1,
 		"isRead": false,
-		"title": "JavaScript for Kids"
+		"title": "JavaScript for Kids",
+		"description": "lorem ipsum lol"
 	},
 	{
 		"id": 2,
 		"isRead": false,
-		"title": "Alice in Wonderland"
+		"title": "Alice in Wonderland",
+		"description": "It is my favourite book"
 	},
 	{
 		"id": 3,
 		"isRead": true,
-		"title": "1984"
+		"title": "1984",
+		"description": "lasdasfasfasf"
 	},
 	{
 		"id": 4,
 		"isRead": true,
-		"title": "The Holy Bible"
+		"title": "The Holy Bible",
+		"description": "Love God"
 	},
 	{
 		"id": 5,
 		"isRead": false,
-		"title": "How to win friends"
+		"title": "How to win friends",
+		"description": "lorem ipsum lol"
 	}
 ]
