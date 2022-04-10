@@ -44,9 +44,10 @@ a:hover {
 }
 
 .container {
-  height: 100vh;
-  overflow: hidden;
-  position: relative;
+  min-height: 100%;
+  overflow: scroll;
+  position: absolute;
+  width: 100%;
 }
 
 footer {
@@ -61,9 +62,10 @@ footer {
 }
 
 .footer-name {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin: 0px;
+
+  display: absolute;
+  text-align: center;
 }
 
 .button-link {
