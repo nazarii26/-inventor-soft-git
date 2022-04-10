@@ -5,7 +5,6 @@ import '../App.css';
 
 export const OnPage = () => {
 	const { state: eachPost } = useLocation();
-	console.log('eachPost', eachPost);
 	const post = '<- posts';
 
 	return (
