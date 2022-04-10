@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useLocation } from 'react-router-dom';
+import { NavLink, Outlet } from "react-router-dom";
+import '../App.css';
 
 export const OnPage = () => {
-	const {state: eachPost} = useLocation();
+	const { state: eachPost } = useLocation();
 	console.log('eachPost', eachPost);
+	const post = '<- posts';
 
 	return (
 		<>
@@ -11,6 +14,7 @@ export const OnPage = () => {
 				<>
 					<h1>{eachPost.title}</h1>
 					<p>{eachPost.body}</p>
+					<NavLink to="/posts" className="button-link"> {post} </NavLink>
 				</>
 			)}</>
 	)
