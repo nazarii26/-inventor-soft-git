@@ -4,7 +4,7 @@ header {
   justify-content: center;
   gap: 20px;
   height: 60px;
-  background-color: green;
+  background-color: #4caf50;
 }
 
 a {
@@ -19,7 +19,7 @@ a {
 }
 
 .active {
-  color: red;
+  color: rgb(215, 250, 182);
   font-size: 2rem;
 }
 
@@ -57,8 +57,8 @@ footer {
   padding: 20px;
   width: 80px;
   text-align: center;
-  transition-duration: 0.4s;
-  text-decoration: none;
-  overflow: hidden;
-  cursor: pointer;
+}
+.button-link:hover {
+  color: rgb(215, 250, 182);
+  background-color: #46a54a;
 }
