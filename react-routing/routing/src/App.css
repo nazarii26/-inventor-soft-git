@@ -1,0 +1,47 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  height: 60px;
+  background-color: green;
+}
+
+a {
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+}
+.posts-nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: 3 00;
+}
+
+.active {
+  color: red;
+  font-size: 2rem;
+}
+
+.container {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  min-width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: grey;
+  height: 40px;
+  color: #fff;
+}
+
+.footer-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
